@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header{
+    background-color: #ae232f;
+    color: #fff;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.hero{
+    background-image: url(img/pngwing.com.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.hero h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.promotion,
+.featured {
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.promotion h2,
+.featured h2 {
+    margin-bottom   : 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.menu-item:hover {
+    transition: 300ms all;
+    transform: scale(1.03);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 
+.menu-item p {
+    margin-bottom: 13px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: rgb(149, 170, 197);
+    color: rgb(53, 49, 49);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+
+
+.footer{
+    background-color: #ae232f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.footer a{
+    color: #fff;
+}
+
+@media only screen and (max-width: 480px){
+    .menu{
+        text-align: center;
+    }
+
+    .promotion, 
+    .featured {
+        text-align: center;
+    }
+
+    .menu-item {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
