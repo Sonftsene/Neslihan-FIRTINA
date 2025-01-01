@@ -6,167 +6,103 @@
     <title>LEZZET PERİSİ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/kitchen.png" type="image/x-icon">
+    <style>
+        /* Başlangıçta gizli içerik */
+        .hidden-content {
+            display: none;
+        }
+
+        /* Checkbox işaretlenince gizli içerik görünür */
+        .read-more-toggle:checked ~ .hidden-content {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* "Devamını Oku" metni */
+        label.read-more-label::after {
+            content: " Devamını Oku";
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* "Kapat" metni */
+        .read-more-toggle:checked + label.read-more-label::after {
+            content: " Kapat";
+        }
+
+        /* Checkbox görünmesin */
+        .read-more-toggle {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>LEZZET PERİSİ</h1>
-
         <nav>
             <ul>
-                <li> <a href="index.html">TARİFLER MENÜSÜ</a> </li>
-                <li> <a href="yemektarifleri.html">YEMEK-SALATA TARİFLERİ</a> </li>
-                <li> <a href="icecektarifleri.html">İÇECEK-PASTA TARİFLERİ</a> </li>
-                <li> <a href="iletisim.html">İLETİŞİM</a> </li>
+                <li><a href="index.html">TARİFLER MENÜSÜ</a></li>
+                <li><a href="yemektarifleri.html">YEMEK-SALATA TARİFLERİ</a></li>
+                <li><a href="icecektarifleri.html">İÇECEK-PASTA TARİFLERİ</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
             </ul>
         </nav>
     </header>
+
     <div class="hero">
         <h1>Lezzetli Tarifler Menüsü</h1>
     </div>
+
     <section class="promotion">
         <h2>YEMEK-SALATA</h2>
-
         <div class="menu-items">
             <div class="menu-item">
                 <img src="img/iskender.jpg" alt="" width="300px" height="200px">
                 <h3>İskender</h3>
+                <p>Klasik Türk mutfağının vazgeçilmez lezzetlerinden biridir.</p>
+                <!-- Devamını Oku -->
+                <input type="checkbox" id="read-more-iskender" class="read-more-toggle">
+                <label for="read-more-iskender" class="read-more-label"></label>
+                <div class="hidden-content">
+                    Etin yoğurt ve tereyağı ile buluştuğu enfes bir tariftir.
+                </div>
             </div>
 
             <div class="menu-item">
                 <img src="img/adana-kebap.jpg" alt="" width="300px" height="200px">
                 <h3>Adana Kebap</h3>
-            </div>
-
-            <div class="menu-item">
-                <img src="img/lahmacun.jpg" alt="" width="300px" height="200px">
-                <h3>Lahmacun</h3>
-            </div>
-
-            <div class="menu-item">
-                <img src="img/içli köfte.jpg" alt="" width="300px" height="200px">
-                <h3>İçli Köfte</h3>
-            </div>
-
-                <div class="menu-item">
-                    <img src="img/imam bayıldı.jpg" alt="" width="300px" height="200px">
-                    <h3>İmam Bayıldı</h3>
+                <p>Lezzetli baharatlarla hazırlanan, şişte pişirilen et yemeği.</p>
+                <!-- Devamını Oku -->
+                <input type="checkbox" id="read-more-adana" class="read-more-toggle">
+                <label for="read-more-adana" class="read-more-label"></label>
+                <div class="hidden-content">
+                    Yanında lavaş, sumaklı soğan ve közlenmiş biberle servis edilir.
                 </div>
-
-                <div class="menu-item">
-                    <img src="img/yaprak sarması.jpg" alt="" width="300px" height="200px">
-                    <h3>Yaprak Sarma</h3>
-                </div>
-                <div class="menu-item">
-                    <img src="img/mevsim salatası.jpg" alt="" width="300px" height="200px">
-                    <h3>Mevsim Salatası</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/cobansalatası.jpg" alt="" width="300px" height="200px">
-                <h3>Çoban Salatası</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/sogansalatası.jpg" alt="" width="300px" height="200px">
-                <h3>Soğan Salatası</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/mor lahana.jpg" alt="" width="300px" height="200px">
-                <h3>Mor Lahana Tarator</h3>
-            </div>
-            <div class="menu-item">
-                    <img src="img/acılıezme.jpg" alt="" width="300px" height="200px">
-                    <h3>Acılı Ezme</h3>
-            </div>
-            <div class="menu-item">
-                    <img src="img/kozbıbersalatası.jpg" alt="" width="300px" height="200px">
-                    <h3>Köz Biber Salatası</h3>
             </div>
         </div>
     </section>
+
     <section class="featured">
         <h2>İÇECEK-PASTA</h2>
-
         <div class="menu-items">
             <div class="menu-item">
                 <img src="img/indir.jpeg" alt="" width="300px" height="300px">
                 <h3>Komposto</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/limonata.jpg" alt="" width="300px" height="300px">
-                <h3>Limonata</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/kahve.jpg" alt="" width="300px" height="300px">
-                <h3>Soğuk Kahve</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/pexels-fritz-dela-cruz-3175640-4836759.jpg" alt="" width="300px" height="300px">
-                <h3>Soğuk Çay</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/pexels-alleksana-4051780.jpg" alt="" width="300px" height="300px">
-                <h3>Çilekli Fruzen</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/pexels-charlotte-may-5946626.jpg" alt="" width="300px" height="300px">
-                <h3>Portakal Suyu</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/cikolatalıpasta.jpg" alt="" width="300px" height="300px">
-                <h3>Çikolatalı Pasta</h3>
-            </div>
-            <div class="menu-item">
-                <img src="img/cupcake.jpg" alt="" width="300px" height="300px">
-                <h3>Cupcake</h3>
-            </div>
-                <div class="menu-item">
-                    <img src="img/magnolıa.jpg" alt="" width="300px" height="300px">
-                    <h3>Magnolia</h3>
+                <p>Taze meyvelerle hazırlanan, tatlı bir içecektir.</p>
+                <!-- Devamını Oku -->
+                <input type="checkbox" id="read-more-komposto" class="read-more-toggle">
+                <label for="read-more-komposto" class="read-more-label"></label>
+                <div class="hidden-content">
+                    Yaz aylarında serinletici bir seçenek olarak tercih edilir.
                 </div>
-                    <div class="menu-item">
-                        <img src="img/cileklipasta.jpg" alt="" width="300px" height="300px">
-                        <h3>Çilekli Pasta</h3>
-                    </div>
-                        <div class="menu-item">
-                            <img src="img/sansebastıan.jpg" alt="" width="300px" height="300px">
-                            <h3>San Sebastian</h3>
-                        </div>
-                            <div class="menu-item">
-                                <img src="img/pankek.jpg" alt="" width="300px" height="300px">
-                                <h3>Pankek</h3>
-                            </div>
-                        </div>
+            </div>
+        </div>
     </section>
-     /* Burada CSS kodlarını yapıştırın */
-    .content {
-      line-height: 1.6;
-    }
-
-    .hidden-content {
-      display: none;
-    }
-
-    #toggle:checked ~ .hidden-content {
-      display: inline;
-    }
-
-    #toggle:checked + label::after {
-      content: " Kapat";
-    }
-
-    label::after {
-      content: " devamını oku";
-      color: blue;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    #toggle {
-      display: none;
-    }
 
     <footer class="footer">
         <p>
-           &copy;2024 Neslihan Fırtına tarafından hazırlanmıştır. <a href=""></a> 
+            &copy;2024 Neslihan Fırtına tarafından hazırlanmıştır.
         </p>
     </footer>
 </body>
