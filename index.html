@@ -136,6 +136,33 @@
                             </div>
                         </div>
     </section>
+     /* Burada CSS kodlarını yapıştırın */
+    .content {
+      line-height: 1.6;
+    }
+
+    .hidden-content {
+      display: none;
+    }
+
+    #toggle:checked ~ .hidden-content {
+      display: inline;
+    }
+
+    #toggle:checked + label::after {
+      content: " Kapat";
+    }
+
+    label::after {
+      content: " devamını oku";
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    #toggle {
+      display: none;
+    }
 
     <footer class="footer">
         <p>
